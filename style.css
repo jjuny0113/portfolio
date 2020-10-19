@@ -110,7 +110,7 @@ p {
 
 #navbar.navbar--dark {
   background-color: var(--color-purple);
-  padding: 8px;
+  padding: 16px;
 }
 
 .navbar__menu {
@@ -138,7 +138,7 @@ p {
 
 .navbar__toggle-btn {
   position: absolute;
-  top: 5px;
+  top: 16px;
   right: 32px;
   font-size: 24px;
   color: var(--color-white);
