@@ -173,6 +173,9 @@ p {
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
 }
+.home__contact:hover {
+  background-color: var(--color-dark-purple);
+}
 
 /* Section common */
 
@@ -318,6 +321,7 @@ p {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
 }
 
 .category__btn.selected,
@@ -341,9 +345,9 @@ p {
   display: inline-block;
   line-height: 24px;
   margin-left: 5px;
-  position: relative;
-  top: -20px;
-  left: 4px;
+  position: absolute;
+  margin-top: 5px;
+  right: 16px;
   opacity: 0;
   transition: all var(--animation-duraion) ease-in;
 }
@@ -511,8 +515,20 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 13px;
+    --font-micro: 12px;
+  }
+
   .navbar__toggle-btn {
     display: block;
+    font-size: var(--font-medium);
+    top: 15px;
+    right: 20px;
   }
   #navbar {
     flex-direction: column;
@@ -535,22 +551,59 @@ p {
     display: block;
   }
 
+  .section {
+    padding: 16px;
+    padding-top: 40px;
+  }
+
   .about_majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
 
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
   .skillset {
     flex-direction: column;
   }
+
+  .category__btn {
+    margin: 4px 0;
+  }
+
   .project {
     flex-grow: 1;
   }
 
   .testimonial__avatar {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .testimonial__avatar:nth-child(even),
+  .testimonial__avatar:nth-child(odd) {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonial__speech-bubble {
+    order: 1;
+    /* order의 기본값은 0 */
+  }
+
+  .arrow-up {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    line-height: 35px;
+    right: 16px;
+    bottom: 16px;
   }
 }
